@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HONESTMAN</title>
+	<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+	<!-- <script type="text/javascript" src="plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> -->
+	<script type="text/javascript" src="plugins/modernizr.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="CSS/my.css">
+	<style type="text/css">
+	.door-top, .door-bottom{
+		width: 100%;
+		height: 50%;
+		position: relative;
+		background-color: #000000;
+	}
+	.door-up,.door-down{
+		position: relative;
+	}
+	</style>
+</head>
+<body onload="document.body.scrollTop='0px';">
+	<div class="start">
+		<div class="door-up">
+			<div class="door-top"></div>
+			<hr style="border-color: rgb(26, 27, 32);;margin:0px;padding: 0px">
+		</div>
+		<div class="door-down">
+			<hr style="border-color: rgb(26, 27, 32);;margin:0px;padding: 0px">
+			<div class="door-bottom"></div>
+		</div>	
+	</div>
+	<div class="home">
+		<img src="IMG/scrolldown.png">
+	</div>
+	<div class="loading" id="loading">
+      	<div class="progress2" id="progress">0%</div>
+    </div>
+    <div class="cd-fixed-bg" id="chufahuangdong">
+    	<div class="cd-bg-1">
+    	</div>
+    	<div class="cd-bg-1huhu"></div>
+    	<div class="cd-bg-1hu"></div>
+    	<div class="huangdong" id="huangdong" style="cursor: pointer;" onclick="making()">
+	    		<img id="huangdong1" style="top: 20px;left: 0px;" src="IMG/1.png">
+	    		<img id="huangdong2" style="top: 15px;left: 4px;" src="IMG/1.png">
+	    		<img id="huangdong3" style="top: 10px;left: 8px;" src="IMG/1.png">
+	    		<img id="huangdong4" style="top: 5px;left: 12px;" src="IMG/1.png">
+	    		<img id="huangdong5" style="top: 0px;left: 16px;" src="IMG/1.png" >
+	    	</div>
+    </div>
+    <div class="cd-scrolling-bg cd-color-2" style="background-attachment: fixed;">
+		<div class="cd-container" style="color: #c3c3c3">
+				<h2 onclick="making()" style="text-align: center;">微光</h2>
+				<a>作者 / 肖水</a>
+				<a style="margin-bottom: 20px">选自 / 《渤海故事集：小说诗诗集》，北岳文艺出版社</a>
+				<p>鸟穿着雨靴在滑草，风的</p>
+				<p>骨架，受制于汽车冷脆的轰鸣</p>
+
+				<p>天空中，斜生的树枝通过开花</p>
+				<p>保持必要而绚烂夺目的孤独。</p>
+
+				<p>雾气从毫厘处被剪断，雨细微的</p>
+				<p>划痕，界定着所有时间的周长。</p>
+
+				<p>其实是动物制造了人类，我们</p>
+				<p>的慵懒像子弹永恒地浮在水面上</p>
+
+				<p>没有事物会主动拾起地上的软刀</p>
+				<p>唯有爱可以使自我免于最先死去</p>
+
+				<p>或者歧义之中还有更多光亮，而</p>
+				<p>我的一生注定只负责失败的部分</p>
+		</div> <!-- cd-container -->
+	</div>
+	<div class="cd-fixed-bg cd-bg-2" style="background-attachment: fixed;">
+		<div class="fangkuang">
+			<img src="IMG/fangkuang.png">
+			<h2 onclick="making()" style="margin: 0px;color: #f4f4f4;cursor: pointer;font-family: 'xihei';font-size: 60px">LIFE  ITSELF</h2>
+		</div>
+	</div>
+	<div class="floor">
+		<div style="width: 260px;margin-right: auto;margin-left: auto;padding-top: 80px;">
+			<img style="width:50px;color: #cccccc;margin-right: 50px" src="IMG/gangtiexia.png">
+			<img style="width:50px;color: #cccccc;margin-right: 50px;" src="IMG/laoshiren.png">
+			<img style="width:50px;color: #cccccc" src="IMG/kuaidi.png">
+		</div>
+	</div>
+	<div style="width: 300px;height: 200px;background-color: rgba(0,0,0,0.7);position: fixed;z-index: 9;display: none;" id="making">
+		<h2 style="color: #ffffff;opacity: 1;text-align: center;top: 10px;margin-top: 30px;">详情内容制作中</h2>
+		<button onclick="javascript:$('#making').css('display','none')" style="position: relative;background-color: #5ba5d0;padding: 10px;width: 100px;font-size: 16px;border: navajowhite;color: #ffffff;margin-left: auto;margin-right: auto;display: block;margin-top: 50px;cursor: pointer;" type="button">关闭</button>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	
+	$(function(){
+	}); 
+	var $loading = $('#loading');
+	var $progress = $('#progress');
+	var prg = 0;
+
+	var timer = 0;
+
+	progress(80, 100);
+
+	window.onload = () => {
+	  progress(100, 10, () => {
+	    setTimeout(OpenDoor,200);
+	  });
+	};
+
+	function progress (dist, delay, callback) {
+	  window.clearInterval(timer)
+	  timer = window.setInterval(() => {
+	    if (prg >= dist) {
+	      window.clearInterval(timer)
+	      prg = dist
+	      callback && callback()
+	    } else {
+	      prg++
+	    }
+
+	    $progress.html(prg + '%')
+	    //console.log(prg)
+	  }, delay)
+	}
+
+	function OpenDoor(){
+		$loading.hide();
+		$(".door-up").animate({
+			top:-WHeight/2,
+		},500);
+		$(".door-down").animate({
+			top: WHeight,
+		},500);
+		setTimeout(function(){$(".start").css("display","none")},500);
+	}
+	function making(){
+		$('#making').css('display','block');
+	}
+	
+</script>
+<script type="text/javascript" src="JS/my.js"></script>

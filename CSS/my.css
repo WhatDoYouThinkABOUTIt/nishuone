@@ -1,0 +1,189 @@
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #16171C;
+	background-image: url("bg-general.jpg");
+}
+@font-face {  
+ font-family: xihei;  
+ src: url("../font/方正幼线简体_0.ttf") /* EOT file for IE */  
+} 
+@font-face {  
+ font-family: BRADHITC;  
+ src: url("../font/BRADHITC.TTF") /* EOT file for IE */  
+} 
+/*进度*/
+.start{
+	position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+.loading {
+  display: table;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.loading .progress2 {
+  display: table-cell;
+  position: relative;
+  top: 45%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #383838;
+}
+.home{
+	width: 100%;
+	height: 100%;
+}
+.home img{
+	width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.4;
+    top: 80%;
+    position: relative;
+}
+.floor{
+	height: 200px;
+	width: 100%;
+	position: relative;
+}
+.cd-fixed-bg {
+    position: relative;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+    
+        display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.cd-scrolling-bg {
+    position: relative;
+    min-height: 100%;
+    padding: 4em 0;
+    line-height: 2;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+  font-family: "xihei";
+  font-size: 22px;
+}
+.cd-container {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+	justify-content: center; 
+	flex-direction: column;
+}
+.cd-container p{
+	display: table-cell;
+	margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.cd-fixed-bg h1, .cd-fixed-bg h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 1170px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 48px;
+    font-weight: 300;
+}
+.cd-scrolling-bg.cd-color-2 {
+    /*background-color: #99a478;*/
+    color: #757575;
+    background-image: url("../IMG/cd-background-2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.cd-bg-1{
+	height: 100%;
+    width: 100%;
+    position: absolute;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+	background-image: url("../IMG/cd-background-1.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.cd-bg-1hu,.cd-bg-1huhu{
+	height: 100%;
+    width: 100%;
+    position: absolute;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+	background-image: url("../IMG/cd-background-1hu.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.cd-fixed-bg.cd-bg-2{
+	background-image: url("../IMG/cd-background-3.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.huangdong{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	height: 350px;
+}
+.huangdong img{
+	top: 0%;
+	left: 0%;
+	position: absolute;
+	display: inline-block;
+	opacity: 0.6;
+}
+.cd-color-2 .cd-container p{
+	text-align: center;
+	margin-bottom: 8px;
+}
+.cd-color-2 .cd-container a{
+	    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    text-align: center;
+}
+.fangkuang{
+	width: 600px;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+}
