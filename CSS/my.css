@@ -183,9 +183,13 @@ body{
     font-size: 16px;
     text-align: center;
 }
+
 .fangkuang{
-	width: 600px;
+	width: 40%;
 	position: relative;
 	margin-right: auto;
 	margin-left: auto;
+}
+.fangkuang img{
+  width: 100%;
 }
